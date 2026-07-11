@@ -26,7 +26,7 @@ Skillアーキテクチャ図など、意味を色や形で区別したい場面
 | `style` | スタイル | `filled`, `rounded`, `dashed` |
 | `fillcolor` | 塗りつぶし色 | `"#eef2ff"` |
 | `label` | 表示テキスト | `"開始"` |
-| `fontname` | フォント | `"Helvetica"` |
+| `fontname` | フォント | `"Meiryo"` |
 
 ### 主なエッジ属性
 
@@ -43,7 +43,7 @@ Skillアーキテクチャ図など、意味を色や形で区別したい場面
 ```dot
 digraph Attributes {
   rankdir=LR;
-  node [shape=box, style="rounded,filled", fillcolor="#eef2ff", fontname="Helvetica"];
+  node [shape=box, style="rounded,filled", fillcolor="#eef2ff", fontname="Meiryo"];
   edge [color="#4b5563", arrowhead=vee];
 
   Start [label="開始", shape=ellipse, fillcolor="#dcfce7"];

@@ -65,7 +65,8 @@ flowchart LR
 ```dot
 digraph SystemArchitecture {
   rankdir=LR;
-  node [shape=box, style="rounded,filled", fillcolor="#eef2ff", fontname="Helvetica"];
+  fontname="Meiryo";
+  node [shape=box, style="rounded,filled", fillcolor="#eef2ff", fontname="Meiryo"];
 
   User [shape=ellipse, label="利用者", fillcolor="#e0f2fe"];
   WebApp [label="Webアプリケーション"];

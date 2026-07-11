@@ -37,7 +37,8 @@
 ```dot
 digraph ModuleDependency {
   rankdir=TB;
-  node [shape=box, fontname="Helvetica"];
+  fontname="Meiryo";
+  node [shape=box, fontname="Meiryo"];
 
   subgraph cluster_ui {
     label="UI層";

@@ -32,7 +32,8 @@
 ```dot
 digraph SkillArchitecture {
   rankdir=LR;
-  node [shape=box, style="rounded,filled", fontname="Helvetica"];
+  fontname="Meiryo";
+  node [shape=box, style="rounded,filled", fontname="Meiryo"];
 
   User [shape=ellipse, fillcolor="#e0f2fe"];
   Skill [label="Skill\n(SKILL.md)", fillcolor="#eef2ff"];

@@ -1,6 +1,7 @@
 digraph DFD {
   rankdir=LR;
-  node [fontname="Helvetica"];
+  node [fontname="Meiryo"];
+  edge [fontname="Meiryo"];
 
   Customer [shape=box, label="顧客"];
   OrderProcess [shape=ellipse, label="注文処理"];

@@ -71,7 +71,8 @@ flowchart TD
 ```dot
 digraph InfraArchitecture {
   rankdir=TB;
-  node [shape=box, fontname="Helvetica"];
+  fontname="Meiryo";
+  node [shape=box, fontname="Meiryo"];
 
   Internet [shape=ellipse, label="インターネット"];
   LB [label="ロードバランサー"];

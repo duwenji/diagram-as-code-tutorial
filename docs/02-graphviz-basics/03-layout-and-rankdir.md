@@ -65,6 +65,9 @@ digraph RankdirDemo {
 ```dot
 digraph ClusterDemo {
   rankdir=LR;
+  fontname="Meiryo";
+  node [fontname="Meiryo"];
+  edge [fontname="Meiryo"];
 
   subgraph cluster_agent {
     label="AIエージェント";
