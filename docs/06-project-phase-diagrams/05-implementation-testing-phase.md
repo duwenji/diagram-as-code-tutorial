@@ -13,8 +13,8 @@
 
 ## 位置づけ
 
-[00-README.md](00-README.md)の全体マッピング表のうち「実装・テスト」行を
-深掘りする教材です。[詳細設計フェーズ](03-detailed-design-phase.md)の
+[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「実装・テスト」行を
+深掘りする教材です。[詳細設計フェーズ](04-detailed-design-phase.md)の
 クラス図をもとに、実際のモジュール構成へ落とし込みます。
 
 ## 基本文法・プロパティ解説
@@ -153,7 +153,7 @@ gantt
 
 ## 演習課題
 
-1. [詳細設計フェーズ](03-detailed-design-phase.md)のクラス図（Order/OrderItem/Customer）
+1. [詳細設計フェーズ](04-detailed-design-phase.md)のクラス図（Order/OrderItem/Customer）
    をもとに、4層以上のモジュール依存図をGraphvizで書け
 2. 3つ以上の条件を組み合わせたデシジョンテーブルを、flowchartの分岐として書け
 3. 単体テスト→結合テスト→受入テストの3段階を含むganttチャートを書け
@@ -166,4 +166,4 @@ gantt
 
 ---
 
-[← 前へ: 詳細設計フェーズ](03-detailed-design-phase.md) | [次へ: リリース・運用保守フェーズ →](05-release-operations-phase.md)
+[← 前へ: 詳細設計フェーズ](04-detailed-design-phase.md) | [次へ: リリース・運用保守フェーズ →](06-release-operations-phase.md)
