@@ -13,7 +13,7 @@
 
 ## 位置づけ
 
-[00-README.md](00-README.md)の全体マッピング表のうち「要件定義」行を
+[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「要件定義」行を
 深掘りする教材です。個々の図の詳細構文は
 [01-mermaid-basics](../01-mermaid-basics/00-README.md)を参照してください。
 
@@ -180,4 +180,4 @@ flowchart LR
 
 ---
 
-[← 06. プロジェクト開発フェーズと図 目次](00-README.md) | [次へ: 基本設計フェーズ →](02-basic-design-phase.md)
+[← 前へ: 開発フェーズ×図カタログ 全体マッピング](01-diagram-catalog-overview.md) | [次へ: 基本設計フェーズ →](03-basic-design-phase.md)
