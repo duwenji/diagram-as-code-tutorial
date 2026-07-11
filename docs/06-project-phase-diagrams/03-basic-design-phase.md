@@ -13,8 +13,8 @@
 
 ## 位置づけ
 
-[00-README.md](00-README.md)の全体マッピング表のうち「基本設計」行を
-深掘りする教材です。要件定義フェーズ（[01](01-requirements-phase.md)）の
+[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「基本設計」行を
+深掘りする教材です。要件定義フェーズ（[02](02-requirements-phase.md)）の
 概念データモデルを、ここでは属性付きの論理ER図へと詳細化します。
 
 ## 基本文法・プロパティ解説
@@ -200,7 +200,7 @@ erDiagram
 **コードのポイント:**
 
 - `PK`/`FK`で主キー・外部キーを明示する
-- [要件定義フェーズ](01-requirements-phase.md)の概念モデルに属性を追加して詳細化している
+- [要件定義フェーズ](02-requirements-phase.md)の概念モデルに属性を追加して詳細化している
 - 型（`int`/`string`/`date`）を明記し、実装時のカラム定義の土台にする
 
 ## 演習課題
@@ -219,4 +219,4 @@ erDiagram
 
 ---
 
-[← 前へ: 要件定義フェーズ](01-requirements-phase.md) | [次へ: 詳細設計フェーズ →](03-detailed-design-phase.md)
+[← 前へ: 要件定義フェーズ](02-requirements-phase.md) | [次へ: 詳細設計フェーズ →](04-detailed-design-phase.md)
