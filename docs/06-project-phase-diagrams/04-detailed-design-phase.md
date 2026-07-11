@@ -14,8 +14,8 @@
 
 ## 位置づけ
 
-[00-README.md](00-README.md)の全体マッピング表のうち「詳細設計」行を
-深掘りする教材です。[基本設計フェーズ](02-basic-design-phase.md)の
+[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「詳細設計」行を
+深掘りする教材です。[基本設計フェーズ](03-basic-design-phase.md)の
 シーケンス概要図・画面遷移図を、ここではより詳細な条件分岐・複合状態を
 含む形に発展させます。
 
@@ -80,7 +80,7 @@ classDiagram
 
 - `class Order { ... }` にメソッド（`addItem`, `calculateTotal`）を含めて実装レベルに近づける
 - `Customer "1" --> "*" Order : places` は「顧客1人が複数の注文を持つ」多重度付き関連
-- [基本設計フェーズ](02-basic-design-phase.md)のER図（CUSTOMER/ORDER/ORDER_ITEM）と
+- [基本設計フェーズ](03-basic-design-phase.md)のER図（CUSTOMER/ORDER/ORDER_ITEM）と
   対応する構造になっている
 
 複合状態を含むステートマシン図の例です。「処理中」の内部段階を
@@ -207,7 +207,7 @@ digraph DFD {
 
 ## 演習課題
 
-1. [基本設計フェーズ](02-basic-design-phase.md)のER図に対応するクラス図を、
+1. [基本設計フェーズ](03-basic-design-phase.md)のER図に対応するクラス図を、
    メソッドを2つ以上加えて書け
 2. 「処理中」に相当する状態を1つ選び、複合状態として2段階以上のサブ状態に
    分解したstateDiagramを書け
@@ -223,4 +223,4 @@ digraph DFD {
 
 ---
 
-[← 前へ: 基本設計フェーズ](02-basic-design-phase.md) | [次へ: 実装・テストフェーズ →](04-implementation-testing-phase.md)
+[← 前へ: 基本設計フェーズ](03-basic-design-phase.md) | [次へ: 実装・テストフェーズ →](05-implementation-testing-phase.md)
