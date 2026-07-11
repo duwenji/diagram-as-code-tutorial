@@ -32,6 +32,21 @@ Skillは「入力を受けて、条件によって処理を分岐し、結果を
 という一連の処理をflowchartで書いてください。リトライは3回までとし、
 上限に達したらエラーを返すようにしてください。」
 
+**ソースコード:**
+
+```text
+flowchart TD
+    Input[入力受信] --> Validate{入力は妥当か}
+    Validate -->|No| Reject[エラーを返す]
+    Validate -->|Yes| Plan[実行計画を立てる]
+    Plan --> Call[ツールを呼び出す]
+    Call --> CheckResult{成功したか}
+    CheckResult -->|No| Retry{リトライ回数上限か}
+    Retry -->|No| Call
+    Retry -->|Yes| Reject
+    CheckResult -->|Yes| Return[結果を返す]
+```
+
 ```mermaid
 flowchart TD
     Input[入力受信] --> Validate{入力は妥当か}
@@ -45,9 +60,30 @@ flowchart TD
     CheckResult -->|Yes| Return[結果を返す]
 ```
 
+**コードのポイント:**
+
+- `Retry -->|No| Call` でツール呼び出しに戻るリトライループを表現している
+- `Retry{リトライ回数上限か}` の分岐で無限ループを防いでいる
+- 成功時（`CheckResult -->|Yes|`）と失敗時（`Reject`）で異なる終端に到達する
+
 **プロンプト例:** 「同じロジックをstateDiagram-v2で書いてください。
 状態はValidating・Planning・CallingTool・Succeeded・Rejectedの
 5つにしてください。」
+
+**ソースコード:**
+
+```text
+stateDiagram-v2
+    [*] --> Validating
+    Validating --> Rejected : 入力不正
+    Validating --> Planning : 入力OK
+    Planning --> CallingTool
+    CallingTool --> Planning : リトライ
+    CallingTool --> Succeeded : 成功
+    CallingTool --> Rejected : リトライ上限
+    Succeeded --> [*]
+    Rejected --> [*]
+```
 
 ```mermaid
 stateDiagram-v2
@@ -61,6 +97,12 @@ stateDiagram-v2
     Succeeded --> [*]
     Rejected --> [*]
 ```
+
+**コードのポイント:**
+
+- 5つの状態（`Validating`/`Planning`/`CallingTool`/`Succeeded`/`Rejected`）がプロンプト通り宣言されている
+- `CallingTool --> Planning : リトライ` で失敗時に計画立案へ戻る遷移を表す
+- `Succeeded --> [*]` / `Rejected --> [*]` の2通りの終了状態がある
 
 ## 演習課題
 
