@@ -28,6 +28,10 @@ Skillは「入力を受けて、条件によって処理を分岐し、結果を
 
 ## 実ソースコード
 
+**プロンプト例:** 「入力検証→実行計画→ツール呼び出し→リトライ→結果返却、
+という一連の処理をflowchartで書いてください。リトライは3回までとし、
+上限に達したらエラーを返すようにしてください。」
+
 ```mermaid
 flowchart TD
     Input[入力受信] --> Validate{入力は妥当か}
@@ -40,6 +44,10 @@ flowchart TD
     Retry -->|Yes| Reject
     CheckResult -->|Yes| Return[結果を返す]
 ```
+
+**プロンプト例:** 「同じロジックをstateDiagram-v2で書いてください。
+状態はValidating・Planning・CallingTool・Succeeded・Rejectedの
+5つにしてください。」
 
 ```mermaid
 stateDiagram-v2

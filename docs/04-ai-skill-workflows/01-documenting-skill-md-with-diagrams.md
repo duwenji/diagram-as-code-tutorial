@@ -54,6 +54,18 @@ flowchart TD
 2. 図の構文エラーがあれば指摘される
 ```
 
+### この図を生成AIに作らせるプロンプト例
+
+```markdown
+diagram-review Skillの処理フローをflowchartで書いてください。
+「Markdown受領→図が含まれるか判定→構文チェック or 通過→
+レビュー結果を返す」の4ステップにし、日本語ラベルで
+SKILL.mdにそのまま貼り付けられる形にしてください。
+```
+
+このプロンプトから得られる図が、上のSKILL.md例に埋め込まれている
+flowchartです。
+
 ## 演習課題
 
 1. 自分のSkillの処理フローをMermaidで書き、SKILL.mdに追記せよ

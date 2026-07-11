@@ -54,6 +54,27 @@ SkillとAgentと2つの外部ツールの依存関係を、Graphvizのdigraphで
 書いてください。rankdir=LRで、外部ツールはクラスタでまとめてください。
 ```
 
+**出力例:**
+
+```dot
+digraph SkillDependency {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef2ff"];
+
+  Skill -> Agent;
+
+  subgraph cluster_tools {
+    label="外部ツール";
+    style=dashed;
+    ToolA;
+    ToolB;
+  }
+
+  Agent -> ToolA;
+  Agent -> ToolB;
+}
+```
+
 ## 演習課題
 
 1. 自分のSkillの構造を説明するプロンプトを、上の表の4要素を
