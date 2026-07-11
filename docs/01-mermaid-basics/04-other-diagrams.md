@@ -30,7 +30,9 @@ Mermaidにはflowchart/sequence/class/state以外にも、目的に応じた
 
 ## 実ソースコード
 
-```mermaid
+**ソースコード:**
+
+```text
 erDiagram
     SKILL ||--o{ TOOL_CALL : invokes
     TOOL_CALL }o--|| TOOL : targets
@@ -45,6 +47,28 @@ erDiagram
 ```
 
 ```mermaid
+erDiagram
+    SKILL ||--o{ TOOL_CALL : invokes
+    TOOL_CALL }o--|| TOOL : targets
+    SKILL {
+        string name
+        string description
+    }
+    TOOL {
+        string name
+        string endpoint
+    }
+```
+
+**コードのポイント:**
+
+- `||--o{` は「1対多」、`}o--||` は「多対1」の関連を表す
+- `SKILL { string name ... }` でエンティティの属性を列挙する
+- `TOOL_CALL`を中間エンティティとして`SKILL`と`TOOL`をつないでいる
+
+**ソースコード:**
+
+```text
 gantt
     title Skill開発スケジュール
     dateFormat YYYY-MM-DD
@@ -54,6 +78,40 @@ gantt
     section 実装
     Skill実装 :a3, after a2, 5d
     テスト :a4, after a3, 3d
+```
+
+```mermaid
+gantt
+    title Skill開発スケジュール
+    dateFormat YYYY-MM-DD
+    section 設計
+    要件整理 :a1, 2026-07-01, 3d
+    図表設計 :a2, after a1, 2d
+    section 実装
+    Skill実装 :a3, after a2, 5d
+    テスト :a4, after a3, 3d
+```
+
+**コードのポイント:**
+
+- `dateFormat YYYY-MM-DD` で日付形式を指定する
+- `section 設計` のようにセクションでタスクをグルーピングする
+- `after a1` で前のタスク（`a1`）の完了後に開始することを表す
+
+**ソースコード:**
+
+```text
+mindmap
+  root((AI Skill開発))
+    設計
+      要件定義
+      図表化
+    実装
+      SKILL.md
+      ツール連携
+    検証
+      テスト
+      レビュー
 ```
 
 ```mermaid
@@ -68,6 +126,38 @@ mindmap
     検証
       テスト
       レビュー
+```
+
+**コードのポイント:**
+
+- `root((AI Skill開発))` がマインドマップの中心ノード
+- インデントの深さが階層構造を表す
+- 兄弟ノード（`設計`/`実装`/`検証`）は横並びの枝になる
+
+**ソースコード:**
+
+```text
+requirementDiagram
+    requirement SkillDoc {
+      id: 1
+      text: SkillはSKILL.mdで説明される
+      risk: medium
+      verifymethod: inspection
+    }
+
+    functionalRequirement DiagramSupport {
+      id: 2
+      text: SKILL.mdは図表を含められる
+      risk: low
+      verifymethod: inspection
+    }
+
+    element SkillMdFile {
+      type: document
+    }
+
+    SkillDoc - satisfies -> DiagramSupport
+    DiagramSupport - traces -> SkillMdFile
 ```
 
 ```mermaid
@@ -93,6 +183,12 @@ requirementDiagram
     SkillDoc - satisfies -> DiagramSupport
     DiagramSupport - traces -> SkillMdFile
 ```
+
+**コードのポイント:**
+
+- `requirement`/`functionalRequirement` で要件の種類を宣言する
+- `id`/`text`/`risk`/`verifymethod` が要件の属性
+- `- satisfies ->` / `- traces ->` で要件と実装要素の対応関係を表す
 
 ## 演習課題
 
