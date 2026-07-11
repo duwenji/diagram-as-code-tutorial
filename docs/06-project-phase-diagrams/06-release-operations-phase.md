@@ -13,8 +13,8 @@
 
 ## 位置づけ
 
-[00-README.md](00-README.md)の全体マッピング表のうち「リリース・運用」行を
-深掘りする教材です。[基本設計フェーズ](02-basic-design-phase.md)の
+[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「リリース・運用」行を
+深掘りする教材です。[基本設計フェーズ](03-basic-design-phase.md)の
 システム構成図を、ここでは実際のサーバー冗長構成にまで具体化します。
 
 ## 基本文法・プロパティ解説
@@ -163,4 +163,4 @@ flowchart TD
 
 ---
 
-[← 前へ: 実装・テストフェーズ](04-implementation-testing-phase.md) | [次へ: アジャイル開発での当てはめ →](06-agile-artifacts.md)
+[← 前へ: 実装・テストフェーズ](05-implementation-testing-phase.md) | [次へ: アジャイル開発での当てはめ →](07-agile-artifacts.md)
