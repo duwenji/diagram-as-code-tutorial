@@ -31,6 +31,17 @@ MermaidはMarkdownに埋め込みやすい手軽さが強みで、Graphvizは
 
 判断の目安をflowchartで示します。
 
+**ソースコード:**
+
+```text
+flowchart TD
+    Q1{Markdownにそのまま埋め込みたいか}
+    Q1 -->|Yes| Mermaid[Mermaidを使う]
+    Q1 -->|No| Q2{レイアウトを細かく制御したいか}
+    Q2 -->|Yes| Graphviz[Graphvizを使う]
+    Q2 -->|No| Mermaid
+```
+
 ```mermaid
 flowchart TD
     Q1{Markdownにそのまま埋め込みたいか}
@@ -39,6 +50,12 @@ flowchart TD
     Q2 -->|Yes| Graphviz[Graphvizを使う]
     Q2 -->|No| Mermaid
 ```
+
+**コードのポイント:**
+
+- `Q1{...}`/`Q2{...}` はひし形の判断ノード
+- `-->|Yes|`/`-->|No|` のラベルで分岐条件を明示する
+- `Q2 -->|No| Mermaid` のように既存ノードへ戻す形で最終的な結論を示せる
 
 ## 演習課題
 
