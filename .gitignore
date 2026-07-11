@@ -1,0 +1,6 @@
+node_modules/
+ebook-output/*.epub
+ebook-output/*.pdf
+ebook-output/*.manuscript.md
+ebook-output/images/
+*.log
