@@ -1,5 +1,9 @@
 title: Diagrams as Code 実践チュートリアル
+titlePronunciation: ダイアグラムズ アズ コード ジッセン チュートリアル
+romanizedTitle: Diagrams as Code Jissen Tutorial
 subtitle: Mermaid・Graphvizで学ぶ生成AI Skill設計図
+subtitlePronunciation: マーメイド・グラフビズ デ マナブ セイセイエーアイ スキル セッケイズ
+romanizedSubtitle: Mermaid Graphviz de Manabu Seisei AI Skill Sekkeizu
 description: >
   Mermaid基礎文法からGraphvizのレイアウト制御、そして生成AIでの
   Skill開発への実践的な適用までを段階的に学べるチュートリアル。
