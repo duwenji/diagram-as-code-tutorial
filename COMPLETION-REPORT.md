@@ -5,6 +5,9 @@
 - css-tutorialと同一のフォルダ・ファイル構成でdiagram-as-code-tutorialを新規作成
 - Mermaid基礎・Graphviz基礎・図の選び方・生成AIでのSkill開発への適用・
   実践例の5カテゴリ、計17レッスン + 5カテゴリREADMEを作成
+
+## 検証待ち（Task 12/13で実施）
+
 - Graphviz例（`.dot`）をローカルの`dot`コマンドでレンダリングし、
   PNGとして格納
 - 電子書籍化パイプライン（EPUB/PDF）を実際に実行し、成果物を確認
