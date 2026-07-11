@@ -1,3 +1,4 @@
 node_modules/
 ebook-output/
 *.log
+.worktrees/
