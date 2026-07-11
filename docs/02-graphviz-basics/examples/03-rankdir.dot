@@ -1,0 +1,5 @@
+digraph RankdirDemo {
+  rankdir=TB;
+  A -> B -> C;
+  A -> D -> C;
+}

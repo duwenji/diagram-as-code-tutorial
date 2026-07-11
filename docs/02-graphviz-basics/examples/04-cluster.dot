@@ -1,0 +1,21 @@
+digraph ClusterDemo {
+  rankdir=LR;
+
+  subgraph cluster_agent {
+    label="AIエージェント";
+    style=dashed;
+    Planner;
+    Executor;
+    Planner -> Executor;
+  }
+
+  subgraph cluster_tools {
+    label="外部ツール";
+    style=dashed;
+    ToolA;
+    ToolB;
+  }
+
+  Executor -> ToolA;
+  Executor -> ToolB;
+}

@@ -1,0 +1,11 @@
+digraph Attributes {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef2ff", fontname="Helvetica"];
+  edge [color="#4b5563", arrowhead=vee];
+
+  Start [label="開始", shape=ellipse, fillcolor="#dcfce7"];
+  Process [label="処理"];
+  End [label="終了", shape=ellipse, fillcolor="#fee2e2"];
+
+  Start -> Process -> End;
+}
