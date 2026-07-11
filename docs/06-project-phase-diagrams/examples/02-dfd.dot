@@ -1,0 +1,16 @@
+digraph DFD {
+  rankdir=LR;
+  node [fontname="Helvetica"];
+
+  Customer [shape=box, label="顧客"];
+  OrderProcess [shape=ellipse, label="注文処理"];
+  OrderStore [shape=box3d, label="注文データ"];
+  InventoryProcess [shape=ellipse, label="在庫確認"];
+  InventoryStore [shape=box3d, label="在庫データ"];
+
+  Customer -> OrderProcess [label="注文情報"];
+  OrderProcess -> OrderStore [label="注文登録"];
+  OrderProcess -> InventoryProcess [label="在庫確認依頼"];
+  InventoryProcess -> InventoryStore [label="在庫参照"];
+  InventoryProcess -> OrderProcess [label="在庫結果"];
+}
