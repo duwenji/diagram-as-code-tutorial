@@ -30,5 +30,9 @@
     "cScale1": "#f0f4f8",
     "cScale2": "#eaf3ff",
     "cScale3": "#f6f8fa"
-  }
+  },
+  "flowchart": { "htmlLabels": false },
+  "class": { "htmlLabels": false },
+  "state": { "htmlLabels": false },
+  "er": { "htmlLabels": false }
 }
