@@ -156,4 +156,4 @@ xychart-beta
 
 ---
 
-[← 前へ: リリース・運用保守フェーズ](06-release-operations-phase.md) | [06. プロジェクト開発フェーズと図 目次へ →](00-README.md)
+[← 前へ: リリース・運用保守フェーズ](06-release-operations-phase.md) | [トップに戻る →](../../README.md)

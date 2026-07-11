@@ -12,13 +12,16 @@ description: >
   Mermaid基礎文法からGraphvizのレイアウト制御、そして生成AIでの
   Skill開発への実践的な適用までを段階的に学べるチュートリアル。
   SKILL.mdへの図の組み込み方、生成AIへのプロンプト設計、
-  マルチエージェントのシーケンス図作成力を養います。
+  マルチエージェントのシーケンス図作成力に加え、要件定義から
+  リリース・運用保守・アジャイル開発までの開発フェーズ別
+  図カタログも収録しています。
 keywords:
   - mermaid
   - graphviz
   - diagrams as code
   - ai skill development
   - generative ai
+  - project phase diagrams
 subject:
   - software development
   - ai agent development

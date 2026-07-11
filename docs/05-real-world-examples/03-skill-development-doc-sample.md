@@ -91,4 +91,4 @@ sequenceDiagram
 
 ---
 
-[← 前へ: マルチエージェントのシーケンス図](02-multi-agent-sequence-diagram.md) | [トップに戻る →](../../README.md)
+[← 前へ: マルチエージェントのシーケンス図](02-multi-agent-sequence-diagram.md) | [次へ: 06. プロジェクト開発フェーズと図 →](../06-project-phase-diagrams/00-README.md)
