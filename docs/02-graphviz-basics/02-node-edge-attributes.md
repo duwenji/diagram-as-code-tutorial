@@ -56,6 +56,12 @@ digraph Attributes {
 
 ![ノード・エッジ属性 - レンダリング結果](examples/02-attributes.png)
 
+**コードのポイント:**
+
+- `node [...]` で全ノード共通のデフォルト属性（shape/style/fillcolor/fontname）を設定する
+- `Start [label="開始", ...]` のように個別ノードで属性を上書きできる
+- `edge [color="#4b5563", arrowhead=vee]` でエッジのデフォルト属性を設定する
+
 ## 演習課題
 
 1. `node [...]`で全ノード共通のshape/styleを指定せよ
