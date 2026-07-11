@@ -27,6 +27,23 @@
 
 ## 実ソースコード
 
+**ソースコード:**
+
+```text
+sequenceDiagram
+    actor User
+    participant Orchestrator as オーケストレータ
+    participant AgentA as 調査エージェント
+    participant AgentB as 実装エージェント
+
+    User->>Orchestrator: タスク依頼
+    Orchestrator->>AgentA: 調査を指示
+    AgentA-->>Orchestrator: 調査結果
+    Orchestrator->>AgentB: 実装を指示
+    AgentB-->>Orchestrator: 実装完了
+    Orchestrator-->>User: 完了報告
+```
+
 ```mermaid
 sequenceDiagram
     actor User
@@ -41,6 +58,12 @@ sequenceDiagram
     AgentB-->>Orchestrator: 実装完了
     Orchestrator-->>User: 完了報告
 ```
+
+**コードのポイント:**
+
+- `Orchestrator`が`User`からの依頼を受け、`AgentA`/`AgentB`へ順に指示を出す構成
+- `->>`が指示、`-->>`が結果報告のメッセージを表す
+- 各エージェントは`Orchestrator`とだけやり取りし、エージェント同士は直接通信しない
 
 ## 演習課題
 
