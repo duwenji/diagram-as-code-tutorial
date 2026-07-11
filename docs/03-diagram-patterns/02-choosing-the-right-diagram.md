@@ -54,7 +54,7 @@ flowchart LR
 - 分岐がない単純な直線フローの例
 
 開発フェーズごとにどの成果物でどの図を使うかは
-[06-project-phase-diagrams](../06-project-phase-diagrams/00-README.md)で
+[06. プロジェクト開発フェーズと図](../06-project-phase-diagrams/00-README.md)で
 詳しく扱います。
 
 ## 演習課題

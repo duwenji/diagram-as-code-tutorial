@@ -14,7 +14,7 @@
 
 ## 位置づけ
 
-[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「アジャイル」行を
+[開発フェーズ×図カタログ 全体マッピング](01-diagram-catalog-overview.md)の全体マッピング表のうち「アジャイル」行を
 深掘りする教材です。02〜06（ウォーターフォール型フェーズ）の内容を
 前提とします。
 
@@ -143,7 +143,7 @@ xychart-beta
 
 1. 自分のチーム（または想定のチーム）で2スプリント分のスプリント計画を
    ganttで書け
-2. [01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表から成果物を3つ選び、
+2. [開発フェーズ×図カタログ 全体マッピング](01-diagram-catalog-overview.md)の全体マッピング表から成果物を3つ選び、
    それぞれがアジャイルのどのタイミング（バックログ作成時/スプリント内/
    継続的デリバリー環境構築時）で作られるかを表にまとめよ
 

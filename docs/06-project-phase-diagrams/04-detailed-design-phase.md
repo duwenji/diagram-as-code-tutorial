@@ -14,7 +14,7 @@
 
 ## 位置づけ
 
-[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「詳細設計」行を
+[開発フェーズ×図カタログ 全体マッピング](01-diagram-catalog-overview.md)の全体マッピング表のうち「詳細設計」行を
 深掘りする教材です。[基本設計フェーズ](03-basic-design-phase.md)の
 シーケンス概要図・画面遷移図を、ここではより詳細な条件分岐・複合状態を
 含む形に発展させます。

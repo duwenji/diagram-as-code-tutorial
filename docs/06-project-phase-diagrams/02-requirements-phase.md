@@ -13,9 +13,9 @@
 
 ## 位置づけ
 
-[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「要件定義」行を
+[開発フェーズ×図カタログ 全体マッピング](01-diagram-catalog-overview.md)の全体マッピング表のうち「要件定義」行を
 深掘りする教材です。個々の図の詳細構文は
-[01-mermaid-basics](../01-mermaid-basics/00-README.md)を参照してください。
+[01. Mermaid基礎](../01-mermaid-basics/00-README.md)を参照してください。
 
 ## 基本文法・プロパティ解説
 

@@ -26,7 +26,7 @@
 |---|---|---|---|---|
 | 要件定義 | 業務フロー図 | Mermaid | flowchart | スイムレーンは`subgraph`で代用 |
 | 要件定義 | 概念データモデル | Mermaid | erDiagram | 詳細化は基本設計のER図で行う |
-| 要件定義 | 要件トレーサビリティ | Mermaid | requirementDiagram | [01-mermaid-basics/04](../01-mermaid-basics/04-other-diagrams.md)参照 |
+| 要件定義 | 要件トレーサビリティ | Mermaid | requirementDiagram | [その他の図](../01-mermaid-basics/04-other-diagrams.md)参照 |
 | 要件定義 | ユースケース図 | ─ | 非対応 | 専用記法なし。flowchartでの代替表現を示す |
 | 基本設計 | システム構成図 | Mermaid/Graphviz | flowchart / DOT | 外部連携が多い場合はGraphviz推奨 |
 | 基本設計 | 画面遷移図 | Mermaid | stateDiagram | 画面を状態として表現 |
@@ -36,14 +36,14 @@
 | 詳細設計 | ステートマシン図 | Mermaid | stateDiagram | 複合状態を扱う |
 | 詳細設計 | 詳細シーケンス図 | Mermaid | sequenceDiagram | alt/loopを扱う |
 | 詳細設計 | DFD（データフロー図） | Graphviz | DOT | Mermaid非対応のため代替 |
-| 実装・テスト | モジュール依存図 | Graphviz | DOT | 複雑化時は[03-03](../03-diagram-patterns/03-complex-diagram-organization.md)の整理法を参照 |
+| 実装・テスト | モジュール依存図 | Graphviz | DOT | 複雑化時は[複雑な図の整理法](../03-diagram-patterns/03-complex-diagram-organization.md)を参照 |
 | 実装・テスト | テストケース分岐図 | Mermaid | flowchart | デシジョンテーブルの可視化 |
 | 実装・テスト | テストスケジュール | Mermaid | gantt | |
 | リリース・運用 | デプロイフロー図 | Mermaid | flowchart | |
-| リリース・運用 | インフラ構成図 | Mermaid/Graphviz | architecture-beta / DOT | シンプルな構成はMermaid、複雑なネットワーク階層はGraphviz推奨。v11.1+必須。詳細は[06-release-operations-phase.md](06-release-operations-phase.md)参照 |
+| リリース・運用 | インフラ構成図 | Mermaid/Graphviz | architecture-beta / DOT | シンプルな構成はMermaid、複雑なネットワーク階層はGraphviz推奨。v11.1+必須。詳細は[リリース・運用保守フェーズ](06-release-operations-phase.md)参照 |
 | リリース・運用 | 障害対応フロー | Mermaid | flowchart | |
 | アジャイル | スプリント計画 | Mermaid | gantt | |
-| アジャイル | バーンダウンチャート | Mermaid（制約あり） | xychart-beta | 日付軸非対応・累積値は事前計算が必要。v10.6+必須。詳細は[07-agile-artifacts.md](07-agile-artifacts.md)参照 |
+| アジャイル | バーンダウンチャート | Mermaid（制約あり） | xychart-beta | 日付軸非対応・累積値は事前計算が必要。v10.6+必須。詳細は[アジャイル開発での当てはめ](07-agile-artifacts.md)参照 |
 
 「非対応」の項目は隠さず明記しています。Mermaid/Graphvizの限界を理解した上で、
 必要に応じて他ツールと併用してください。
@@ -58,7 +58,7 @@
 flowchart TD
     A[表から成果物を探す] --> B{推奨ツールは?}
     B -->|Mermaid| C[該当フェーズの教材で構文を確認]
-    B -->|Graphviz| D[02-graphviz-basicsで構文を確認]
+    B -->|Graphviz| D[Graphviz基礎の教材で構文を確認]
     B -->|非対応| E[代替手段を検討する]
 ```
 
@@ -66,7 +66,7 @@ flowchart TD
 flowchart TD
     A[表から成果物を探す] --> B{推奨ツールは?}
     B -->|Mermaid| C[該当フェーズの教材で構文を確認]
-    B -->|Graphviz| D[02-graphviz-basicsで構文を確認]
+    B -->|Graphviz| D[Graphviz基礎の教材で構文を確認]
     B -->|非対応| E[代替手段を検討する]
 ```
 

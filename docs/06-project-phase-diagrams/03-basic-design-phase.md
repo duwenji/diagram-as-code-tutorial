@@ -13,7 +13,7 @@
 
 ## 位置づけ
 
-[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「基本設計」行を
+[開発フェーズ×図カタログ 全体マッピング](01-diagram-catalog-overview.md)の全体マッピング表のうち「基本設計」行を
 深掘りする教材です。要件定義フェーズ（[02](02-requirements-phase.md)）の
 概念データモデルを、ここでは属性付きの論理ER図へと詳細化します。
 
@@ -98,7 +98,7 @@ digraph SystemArchitecture {
 - 外部サービスが増えても`cluster_external`内に追加するだけでよく、
   Graphvizが自動的にレイアウトを整理する
 - どちらを使うかの判断基準は
-  [03-diagram-patterns/01](../03-diagram-patterns/01-mermaid-vs-graphviz.md)を参照
+  [Mermaid vs Graphviz](../03-diagram-patterns/01-mermaid-vs-graphviz.md)を参照
 
 > **補足:** Mermaidにはアーキテクチャ専用記法の`C4Context`もあります。
 > コンテキスト図（システムと利用者・外部システムの関係を示す図）を

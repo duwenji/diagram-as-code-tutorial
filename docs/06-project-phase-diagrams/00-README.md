@@ -24,7 +24,7 @@
 | 07 | [アジャイル開発での当てはめ](07-agile-artifacts.md) | スプリント計画・開発サイクル図・カタログのアジャイルへの対応付け |
 
 成果物×推奨ツールの全体マッピング表は
-[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)を参照してください。
+[開発フェーズ×図カタログ 全体マッピング](01-diagram-catalog-overview.md)を参照してください。
 
 ## 学習の進め方
 

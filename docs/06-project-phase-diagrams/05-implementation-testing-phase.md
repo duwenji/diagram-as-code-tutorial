@@ -13,7 +13,7 @@
 
 ## 位置づけ
 
-[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「実装・テスト」行を
+[開発フェーズ×図カタログ 全体マッピング](01-diagram-catalog-overview.md)の全体マッピング表のうち「実装・テスト」行を
 深掘りする教材です。[詳細設計フェーズ](04-detailed-design-phase.md)の
 クラス図をもとに、実際のモジュール構成へ落とし込みます。
 
@@ -81,7 +81,7 @@ digraph ModuleDependency {
 - `rankdir=TB`でUI層→サービス層→リポジトリ層という上位から下位への依存方向を表す
 - 3つの`cluster_*`で層ごとにグルーピングし、層をまたぐ依存が視覚的にわかる
 - モジュールが増えて依存が複雑化した場合の整理法は
-  [03-diagram-patterns/03](../03-diagram-patterns/03-complex-diagram-organization.md)を参照
+  [複雑な図の整理法](../03-diagram-patterns/03-complex-diagram-organization.md)を参照
 
 テストケース分岐図の例です。デシジョンテーブル（年齢×年収の組み合わせ）を
 flowchartの分岐として可視化します。

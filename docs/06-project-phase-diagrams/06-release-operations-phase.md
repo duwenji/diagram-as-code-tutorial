@@ -13,7 +13,7 @@
 
 ## 位置づけ
 
-[01-diagram-catalog-overview.md](01-diagram-catalog-overview.md)の全体マッピング表のうち「リリース・運用」行を
+[開発フェーズ×図カタログ 全体マッピング](01-diagram-catalog-overview.md)の全体マッピング表のうち「リリース・運用」行を
 深掘りする教材です。[基本設計フェーズ](03-basic-design-phase.md)の
 システム構成図を、ここでは実際のサーバー冗長構成にまで具体化します。
 
