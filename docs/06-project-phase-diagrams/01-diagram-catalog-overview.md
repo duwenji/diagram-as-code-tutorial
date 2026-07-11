@@ -40,10 +40,10 @@
 | 実装・テスト | テストケース分岐図 | Mermaid | flowchart | デシジョンテーブルの可視化 |
 | 実装・テスト | テストスケジュール | Mermaid | gantt | |
 | リリース・運用 | デプロイフロー図 | Mermaid | flowchart | |
-| リリース・運用 | インフラ構成図 | Graphviz | DOT | ネットワーク階層表現 |
+| リリース・運用 | インフラ構成図 | Mermaid/Graphviz | architecture-beta / DOT | シンプルな構成はMermaid、複雑なネットワーク階層はGraphviz推奨。v11.1+必須。詳細は[06-release-operations-phase.md](06-release-operations-phase.md)参照 |
 | リリース・運用 | 障害対応フロー | Mermaid | flowchart | |
 | アジャイル | スプリント計画 | Mermaid | gantt | |
-| アジャイル | バーンダウンチャート | ─ | 非対応 | 他ツール（表計算/BIツール等）併用を明記 |
+| アジャイル | バーンダウンチャート | Mermaid（制約あり） | xychart-beta | 日付軸非対応・累積値は事前計算が必要。v10.6+必須。詳細は[07-agile-artifacts.md](07-agile-artifacts.md)参照 |
 
 「非対応」の項目は隠さず明記しています。Mermaid/Graphvizの限界を理解した上で、
 必要に応じて他ツールと併用してください。
