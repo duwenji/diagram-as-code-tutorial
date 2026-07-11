@@ -1,0 +1,36 @@
+digraph ModuleDependency {
+  rankdir=TB;
+  node [shape=box, fontname="Helvetica"];
+
+  subgraph cluster_ui {
+    label="UI層";
+    style=dashed;
+    LoginView [label="LoginView"];
+    CartView [label="CartView"];
+    CheckoutView [label="CheckoutView"];
+  }
+
+  subgraph cluster_service {
+    label="サービス層";
+    style=dashed;
+    OrderService [label="OrderService"];
+    PaymentService [label="PaymentService"];
+    InventoryService [label="InventoryService"];
+  }
+
+  subgraph cluster_repository {
+    label="リポジトリ層";
+    style=dashed;
+    OrderRepository [label="OrderRepository"];
+    ProductRepository [label="ProductRepository"];
+  }
+
+  LoginView -> OrderService;
+  CartView -> OrderService;
+  CheckoutView -> OrderService;
+  CheckoutView -> PaymentService;
+  OrderService -> OrderRepository;
+  OrderService -> InventoryService;
+  PaymentService -> OrderRepository;
+  InventoryService -> ProductRepository;
+}
