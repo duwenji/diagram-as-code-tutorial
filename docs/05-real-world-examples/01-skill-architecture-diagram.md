@@ -53,6 +53,12 @@ digraph SkillArchitecture {
 
 ![Skillアーキテクチャ図 - レンダリング結果](examples/01-skill-architecture.png)
 
+**コードのポイント:**
+
+- `rankdir=LR`で左から右の流れ（User→Skill→生成AI→外部ツール）を表現している
+- `subgraph cluster_tools { ... }`で外部ツール群をグルーピングしている
+- `fillcolor`で役割ごとに色分け（User/Skill/生成AI）している
+
 ## 演習課題
 
 1. 自分のSkillの構成要素を洗い出し、同様の構造図を書け
