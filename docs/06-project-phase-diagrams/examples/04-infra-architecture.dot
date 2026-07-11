@@ -1,0 +1,31 @@
+digraph InfraArchitecture {
+  rankdir=TB;
+  node [shape=box, fontname="Helvetica"];
+
+  Internet [shape=ellipse, label="インターネット"];
+  LB [label="ロードバランサー"];
+
+  subgraph cluster_web {
+    label="Webサーバー層";
+    style=dashed;
+    Web1 [label="Web1"];
+    Web2 [label="Web2"];
+  }
+
+  subgraph cluster_app {
+    label="APサーバー層";
+    style=dashed;
+    App1 [label="App1"];
+    App2 [label="App2"];
+  }
+
+  DB [shape=cylinder, label="データベース(冗長構成)"];
+
+  Internet -> LB;
+  LB -> Web1;
+  LB -> Web2;
+  Web1 -> App1;
+  Web2 -> App2;
+  App1 -> DB;
+  App2 -> DB;
+}
