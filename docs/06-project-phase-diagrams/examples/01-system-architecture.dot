@@ -1,0 +1,24 @@
+digraph SystemArchitecture {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#eef2ff", fontname="Helvetica"];
+
+  User [shape=ellipse, label="利用者", fillcolor="#e0f2fe"];
+  WebApp [label="Webアプリケーション"];
+  API [label="APIサーバー"];
+  DB [shape=cylinder, label="データベース", fillcolor="#fef9c3"];
+
+  subgraph cluster_external {
+    label="外部連携サービス";
+    style=dashed;
+    Mail [label="メール配信サービス"];
+    Payment [label="決済代行サービス"];
+    Auth [label="認証基盤"];
+  }
+
+  User -> WebApp;
+  WebApp -> API;
+  API -> DB;
+  API -> Mail;
+  API -> Payment;
+  API -> Auth;
+}
