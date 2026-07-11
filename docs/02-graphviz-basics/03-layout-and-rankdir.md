@@ -54,6 +54,12 @@ digraph RankdirDemo {
 
 ![rankdirの例 - レンダリング結果](examples/03-rankdir.png)
 
+**コードのポイント:**
+
+- `rankdir=TB` で上から下へのレイアウトになる（既定値と同じ）
+- `A -> B -> C;` は `A -> B; B -> C;` と同じ意味のチェーン記法
+- `A`から`B`経由と`D`経由の2系統が`C`で合流する構造
+
 `docs/02-graphviz-basics/examples/04-cluster.dot`
 
 ```dot
@@ -81,6 +87,12 @@ digraph ClusterDemo {
 ```
 
 ![クラスタの例 - レンダリング結果](examples/04-cluster.png)
+
+**コードのポイント:**
+
+- `subgraph cluster_agent { ... }` のように`cluster_`で始めると枠付きで描画される
+- `label="AIエージェント"` でクラスタ内に表示するラベルを指定する
+- `Executor -> ToolA;` のようにクラスタ外のノードへもエッジを張れる
 
 ## 演習課題
 
