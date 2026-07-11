@@ -1,0 +1,19 @@
+digraph SkillArchitecture {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fontname="Helvetica"];
+
+  User [shape=ellipse, fillcolor="#e0f2fe"];
+  Skill [label="Skill\n(SKILL.md)", fillcolor="#eef2ff"];
+  LLM [label="生成AI", fillcolor="#fef9c3"];
+
+  subgraph cluster_tools {
+    label="外部ツール群";
+    style=dashed;
+    Mermaid [label="Mermaid CLI"];
+    Graphviz [label="Graphviz dot"];
+  }
+
+  User -> Skill -> LLM;
+  LLM -> Mermaid;
+  LLM -> Graphviz;
+}
