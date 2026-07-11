@@ -3,10 +3,10 @@
 Mermaid基礎知識の習得から、Graphvizによる高度なレイアウト制御、
 そして生成AIでのSkill開発への実践的な適用までを段階的に学ぶ教材です。
 
-> 💡 本チュートリアルは、[ideas/mermaid-study-notes.md](../ideas/mermaid-study-notes.md)
-> の学習メモを土台に、体系的な教材として再構成したものです。
+> 💡 本チュートリアルは、Mermaid/Graphvizの学習メモを土台に、
+> 体系的な教材として再構成したものです。
 
-**📢 更新状況**: 🚧 作成中
+**📢 更新状況**: ✅ 完成
 
 - 全体索引: [MASTER-INDEX.md](MASTER-INDEX.md)
 - スタイルガイド: [00_STYLE_GUIDE.md](00_STYLE_GUIDE.md)
