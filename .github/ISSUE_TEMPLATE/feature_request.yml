@@ -1,0 +1,32 @@
+name: Feature request
+description: 教材に追加したい章・サンプル・演習を提案します
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 背景・課題
+      description: どんな学習上の課題を解決したいですか？
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: 追加したい章、サンプルコード、演習など
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scenario
+    attributes:
+      label: 関連セクション
+      options:
+        - Mermaid基礎 (01-mermaid-basics)
+        - Graphviz基礎 (02-graphviz-basics)
+        - 図の選び方と整理法 (03-diagram-patterns)
+        - 生成AIでのSkill開発への適用 (04-ai-skill-workflows)
+        - 実践例 (05-real-world-examples)
+        - その他 (全体構成・書籍化など)

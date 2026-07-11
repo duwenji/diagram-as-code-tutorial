@@ -1,0 +1,31 @@
+title: Diagrams as Code 実践チュートリアル
+subtitle: Mermaid・Graphvizで学ぶ生成AI Skill設計図
+creator: 杜 文吉
+language: ja-JP
+rights: Copyright (c) 杜 文吉
+date: 2026-07-11
+toc: true
+toc-depth: 2
+publisher: Duwenji Lab
+identifier: diagram-as-code-tutorial
+description: >
+  Mermaid基礎文法からGraphvizのレイアウト制御、そして生成AIでの
+  Skill開発への実践的な適用までを段階的に学べるチュートリアル。
+  SKILL.mdへの図の組み込み方、生成AIへのプロンプト設計、
+  マルチエージェントのシーケンス図作成力を養います。
+keywords:
+  - mermaid
+  - graphviz
+  - diagrams as code
+  - ai skill development
+  - generative ai
+subject:
+  - software development
+  - ai agent development
+chapters:
+  dir-titles:
+    01-mermaid-basics: Mermaid基礎
+    02-graphviz-basics: Graphviz基礎
+    03-diagram-patterns: 図の選び方と整理法
+    04-ai-skill-workflows: 生成AIでのSkill開発への適用
+    05-real-world-examples: 実践例
