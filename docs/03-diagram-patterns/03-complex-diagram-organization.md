@@ -30,11 +30,37 @@
 
 概要図と詳細図に分割する例です。
 
+**ソースコード:**
+
+```text
+flowchart TD
+    subgraph Overview[概要図]
+        User[ユーザー] --> Skill[Skill]
+        Skill --> Result[結果]
+    end
+```
+
 ```mermaid
 flowchart TD
     subgraph Overview[概要図]
         User[ユーザー] --> Skill[Skill]
         Skill --> Result[結果]
+    end
+```
+
+**コードのポイント:**
+
+- `subgraph Overview[概要図] ... end` で概要図全体を1つの枠にまとめている
+- ノード数は3個のみに抑え、全体の流れだけを示す
+
+**ソースコード:**
+
+```text
+flowchart TD
+    subgraph SkillDetail[Skill内部の詳細図]
+        Input[入力解析] --> Plan[計画立案]
+        Plan --> ToolCall[ツール呼び出し]
+        ToolCall --> Format[結果整形]
     end
 ```
 
@@ -46,6 +72,12 @@ flowchart TD
         ToolCall --> Format[結果整形]
     end
 ```
+
+**コードのポイント:**
+
+- `subgraph SkillDetail[Skill内部の詳細図] ... end` で概要図の`Skill`ノードを詳細化している
+- 4ステップの内部処理（入力解析→計画立案→ツール呼び出し→結果整形）を示す
+- 概要図と詳細図を分けることで、それぞれのノード数を少なく保てる
 
 ## 演習課題
 
