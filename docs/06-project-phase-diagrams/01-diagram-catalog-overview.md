@@ -29,10 +29,12 @@
 | 要件定義 | 概念データモデル | Mermaid | erDiagram | 詳細化は基本設計のER図で行う |
 | 要件定義 | 要件トレーサビリティ | Mermaid | requirementDiagram | [その他の図](../01-mermaid-basics/04-other-diagrams.md)参照 |
 | 要件定義 | ユースケース図 | ─ | 非対応 | 専用記法なし。flowchartでの代替表現を示す |
+| 要件定義 | 要件優先度マトリクス | Mermaid | quadrantChart | 詳細は[要件定義フェーズ](02-requirements-phase.md)参照 |
 | 基本設計 | システム構成図 | Mermaid/Graphviz | flowchart / DOT | 外部連携が多い場合はGraphviz推奨 |
 | 基本設計 | 画面遷移図 | Mermaid | stateDiagram | 画面を状態として表現 |
 | 基本設計 | ER図（論理） | Mermaid | erDiagram | |
 | 基本設計 | シーケンス概要図 | Mermaid | sequenceDiagram | |
+| 基本設計 | システムコンテキスト図 | Mermaid | C4Context | 実験的機能。詳細は[基本設計フェーズ](03-basic-design-phase.md)参照 |
 | 詳細設計 | クラス図 | Mermaid | classDiagram | |
 | 詳細設計 | ステートマシン図 | Mermaid | stateDiagram | 複合状態を扱う |
 | 詳細設計 | 詳細シーケンス図 | Mermaid | sequenceDiagram | alt/loopを扱う |
@@ -43,11 +45,9 @@
 | リリース・運用 | デプロイフロー図 | Mermaid | flowchart | |
 | リリース・運用 | インフラ構成図 | Mermaid/Graphviz | architecture-beta / DOT | シンプルな構成はMermaid、複雑なネットワーク階層はGraphviz推奨。v11.1+必須。詳細は[リリース・運用保守フェーズ](06-release-operations-phase.md)参照 |
 | リリース・運用 | 障害対応フロー | Mermaid | flowchart | |
+| リリース・運用 | ブランチ戦略図 | Mermaid | gitGraph | 詳細は[リリース・運用保守フェーズ](06-release-operations-phase.md)参照 |
 | アジャイル | スプリント計画 | Mermaid | gantt | |
 | アジャイル | バーンダウンチャート | Mermaid（制約あり） | xychart-beta | 日付軸非対応・累積値は事前計算が必要。v10.6+必須。詳細は[アジャイル開発での当てはめ](07-agile-artifacts.md)参照 |
-| 要件定義 | 要件優先度マトリクス | Mermaid | quadrantChart | 詳細は[要件定義フェーズ](02-requirements-phase.md)参照 |
-| 基本設計 | システムコンテキスト図 | Mermaid | C4Context | 実験的機能。詳細は[基本設計フェーズ](03-basic-design-phase.md)参照 |
-| リリース・運用 | ブランチ戦略図 | Mermaid | gitGraph | 詳細は[リリース・運用保守フェーズ](06-release-operations-phase.md)参照 |
 | アジャイル | カンバンボード | Mermaid | kanban | 詳細は[アジャイル開発での当てはめ](07-agile-artifacts.md)参照 |
 
 「非対応」の項目は隠さず明記しています。Mermaid/Graphvizの限界を理解した上で、
@@ -111,7 +111,7 @@ timeline
 - `要件定義 : 業務フロー整理 : 要件優先度マトリクス作成` の1行が1つの期間（フェーズ）を表し、
   `:`区切りで複数のイベントを時系列に並べられる
 - ganttと異なり日付や期間の長さは指定せず、順序だけを表現する
-- timelineはMermaid公式ドキュメントで今も「実験的な機能」と明記されている点に注意する
+- timelineはMermaid公式ドキュメントで今も「実験的機能」と明記されている点に注意する
 
 ## 演習課題
 

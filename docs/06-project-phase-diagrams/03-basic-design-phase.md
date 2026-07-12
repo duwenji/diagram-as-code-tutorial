@@ -141,7 +141,7 @@ C4Context
   `要素ID, 表示名, 説明` の順で宣言する
 - `System_Ext` は自システムの外部にある関連システムを表す（`System`と区別する）
 - `Rel(customer, ecSystem, "商品を注文する")` で要素間の関係とラベルを表現する
-- C4Contextは公式ドキュメントで今も「実験的な機能」と明記されており、
+- C4Contextは公式ドキュメントで今も「実験的機能」と明記されており、
   構文が将来変更される可能性がある点に注意する
 - Graphvizの`subgraph cluster_external`（自由なグルーピング）と異なり、
   C4Contextは`Person`/`System`/`System_Ext`という役割が固定された標準記法である
