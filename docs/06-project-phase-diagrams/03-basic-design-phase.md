@@ -5,6 +5,7 @@
 - 基本設計フェーズの主な成果物を把握する
 - システム構成図をMermaid/Graphviz双方で書き分けられる
 - 画面遷移図・ER図（論理）・シーケンス概要図をMermaidで書ける
+- C4Contextで標準化されたシステムコンテキスト図を書ける
 
 ## 概要
 
@@ -27,6 +28,7 @@
 | システム構成図（複雑） | Graphviz DOT | 外部連携が多い場合、自動レイアウトで整理しやすい |
 | 画面遷移図 | stateDiagram | 画面を状態、遷移操作をラベル付き矢印で表現できる |
 | ER図（論理） | erDiagram | エンティティの属性・関連を明確化できる |
+| システムコンテキスト図 | C4Context | 標準化された記法でシステム境界と外部関係者の関係を表現できる（実験的機能） |
 
 ## 実ソースコード
 
@@ -100,10 +102,49 @@ digraph SystemArchitecture {
 - どちらを使うかの判断基準は
   [Mermaid vs Graphviz](../03-diagram-patterns/01-mermaid-vs-graphviz.md)を参照
 
-> **補足:** Mermaidにはアーキテクチャ専用記法の`C4Context`もあります。
-> コンテキスト図（システムと利用者・外部システムの関係を示す図）を
-> 標準化された記法で書きたい場合の選択肢です。本教材では扱わず、
-> 詳細は[ROADMAP.md](../../ROADMAP.md)の将来拡張候補を参照してください。
+システムコンテキスト図の例です。C4Contextは、システムと利用者・外部システムの
+関係を標準化された記法（Person/System/Rel）で表現します。
+
+**ソースコード:**
+
+```text
+C4Context
+    title システムコンテキスト図（ECサイト）
+
+    Person(customer, "顧客", "商品を注文する利用者")
+    System(ecSystem, "ECサイト", "商品検索・注文・決済を提供する")
+    System_Ext(paymentGateway, "決済代行サービス", "外部の決済処理基盤")
+    System_Ext(mailService, "メール配信サービス", "注文確認メールを送信する")
+
+    Rel(customer, ecSystem, "商品を注文する")
+    Rel(ecSystem, paymentGateway, "決済を依頼する")
+    Rel(ecSystem, mailService, "注文確認を送信する")
+```
+
+```mermaid
+C4Context
+    title システムコンテキスト図（ECサイト）
+
+    Person(customer, "顧客", "商品を注文する利用者")
+    System(ecSystem, "ECサイト", "商品検索・注文・決済を提供する")
+    System_Ext(paymentGateway, "決済代行サービス", "外部の決済処理基盤")
+    System_Ext(mailService, "メール配信サービス", "注文確認メールを送信する")
+
+    Rel(customer, ecSystem, "商品を注文する")
+    Rel(ecSystem, paymentGateway, "決済を依頼する")
+    Rel(ecSystem, mailService, "注文確認を送信する")
+```
+
+**コードのポイント:**
+
+- `Person(customer, "顧客", "...")` / `System(ecSystem, "ECサイト", "...")` は
+  `要素ID, 表示名, 説明` の順で宣言する
+- `System_Ext` は自システムの外部にある関連システムを表す（`System`と区別する）
+- `Rel(customer, ecSystem, "商品を注文する")` で要素間の関係とラベルを表現する
+- C4Contextは公式ドキュメントで今も「実験的な機能」と明記されており、
+  構文が将来変更される可能性がある点に注意する
+- Graphvizの`subgraph cluster_external`（自由なグルーピング）と異なり、
+  C4Contextは`Person`/`System`/`System_Ext`という役割が固定された標準記法である
 
 画面遷移図の例です。
 
@@ -209,6 +250,8 @@ erDiagram
    flowchartで書き、次に外部連携を3つ以上追加してGraphvizのcluster版に
    書き直せ
 2. 3画面以上のstateDiagramで画面遷移図を書け
+3. 自分のシステムの利用者・外部連携先を洗い出し、C4Contextでシステム
+   コンテキスト図を書け
 
 ## 理解度チェック
 
@@ -216,6 +259,7 @@ erDiagram
 - [ ] 複雑さに応じてMermaidとGraphvizを使い分ける判断ができる
 - [ ] stateDiagramで画面遷移を表現できる
 - [ ] ER図に主キー・外部キーを明記できる
+- [ ] C4Contextで`Person`/`System`/`System_Ext`/`Rel`を使い分けられる
 
 ---
 
