@@ -5,6 +5,7 @@
 - リリース・運用保守フェーズの主な成果物を把握する
 - デプロイフロー図・障害対応フローをMermaidで書ける
 - インフラ構成図をMermaid（architecture-beta）またはGraphvizで書ける
+- gitGraphでブランチ戦略・リリースタイミングを可視化できる
 
 ## 概要
 
@@ -26,6 +27,7 @@
 | デプロイフロー図 | flowchart | ビルド〜デプロイ〜検証の手順と分岐を表現できる |
 | インフラ構成図 | Mermaid architecture-beta / Graphviz DOT | シンプルな冗長構成はMermaidで書けるが、サブネットや自由な形状を含む複雑な階層はGraphvizが得意 |
 | 障害対応フロー | flowchart | 検知から復旧までの対応手順・エスカレーションを表現できる |
+| ブランチ戦略図 | gitGraph | ブランチの分岐・マージ・リリースタイミングを可視化できる |
 
 ## 実ソースコード
 
@@ -210,12 +212,67 @@ flowchart TD
 - `Verify -->|NG| Fix` のように復旧確認に失敗した場合は原因調査に戻すループがある
 - 軽微・重大どちらの経路も最終的に`Report`（報告書作成）へ合流する
 
+ブランチ戦略図の例です。リリースブランチの運用と、緊急修正（hotfix）の
+分岐・マージタイミングを可視化します。
+
+**ソースコード:**
+
+```text
+gitGraph
+    commit id: "初期リリース"
+    branch develop
+    checkout develop
+    commit id: "機能A実装"
+    branch feature/payment
+    checkout feature/payment
+    commit id: "決済機能実装"
+    checkout develop
+    merge feature/payment
+    checkout main
+    merge develop tag: "v1.1.0"
+    branch hotfix/urgent-fix
+    checkout hotfix/urgent-fix
+    commit id: "緊急バグ修正"
+    checkout main
+    merge hotfix/urgent-fix tag: "v1.1.1"
+```
+
+```mermaid
+gitGraph
+    commit id: "初期リリース"
+    branch develop
+    checkout develop
+    commit id: "機能A実装"
+    branch feature/payment
+    checkout feature/payment
+    commit id: "決済機能実装"
+    checkout develop
+    merge feature/payment
+    checkout main
+    merge develop tag: "v1.1.0"
+    branch hotfix/urgent-fix
+    checkout hotfix/urgent-fix
+    commit id: "緊急バグ修正"
+    checkout main
+    merge hotfix/urgent-fix tag: "v1.1.1"
+```
+
+**コードのポイント:**
+
+- `branch feature/payment` → `checkout feature/payment` で作業用ブランチに切り替える
+- `merge feature/payment` で`develop`に機能ブランチを取り込み、
+  `merge develop tag: "v1.1.0"` でmainへのリリースにタグを付ける
+- `branch hotfix/urgent-fix` のように、mainから直接切る緊急修正ブランチも表現できる
+- gitGraphの基本機能はMermaidの早期バージョンから安定して利用できる
+
 ## 演習課題
 
 1. ロールバック処理を含むデプロイフロー図を、自分のプロジェクトを想定して書け
 2. Webサーバーを3台以上に冗長化したインフラ構成図を、Mermaid（architecture-beta）
    またはGraphvizで書け
 3. 「検知」「影響範囲判定」「復旧」「報告」の4段階を含む障害対応フローを書け
+4. featureブランチ2本とhotfixブランチ1本を含むブランチ戦略図を、
+   自分のプロジェクトを想定して書け
 
 ## 理解度チェック
 
@@ -223,6 +280,7 @@ flowchart TD
 - [ ] Mermaidの`architecture-beta`でシンプルな冗長構成を表現できる
 - [ ] Graphvizのクラスタで、より複雑な階層を持つインフラ構成を表現できる
 - [ ] 障害対応フローに検知からエスカレーション・復旧確認までの流れを書ける
+- [ ] gitGraphでブランチの分岐・マージ・タグ付けを表現できる
 
 ---
 
