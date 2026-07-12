@@ -1,0 +1,28 @@
+digraph GraphvizReleaseHistory {
+  rankdir=LR;
+  fontname="Meiryo";
+  node [fontname="Meiryo", shape=box, style=filled, fillcolor=white];
+  edge [fontname="Meiryo"];
+
+  subgraph cluster_old {
+    label="偶数=安定版方式（〜2021）";
+    style=dashed;
+    v2_40 [label="2.40.0\n2016-12-20"];
+    v2_50 [label="2.50.0\n2021-12-04"];
+    v2_40 -> v2_50;
+  }
+
+  subgraph cluster_new {
+    label="厳密なSemVer方式（2022〜）";
+    style=dashed;
+    v3_0 [label="3.0.0\n2022-02-26"];
+    v7_0 [label="7.0.0\n2022-10-23"];
+    v9_0 [label="9.0.0\n2023-09-11"];
+    v11_0 [label="11.0.0\n2024-04-28"];
+    v13_0 [label="13.0.0\n2025-06-08"];
+    v15_1 [label="15.1.0（最新）\n2026-06-18"];
+    v3_0 -> v7_0 -> v9_0 -> v11_0 -> v13_0 -> v15_1;
+  }
+
+  v2_50 -> v3_0 [label="バージョニング方針の変更"];
+}

@@ -8,6 +8,7 @@
     "kdp-markdown"
   ],
   "metadataFile": "./.github/skills-config/ebook-build/diagram-as-code-tutorial.metadata.yaml",
+  "styleFile": "./.github/skills-config/ebook-build/diagram-as-code-tutorial.style.css",
   "kdpMetadataFile": "./.github/skills-config/ebook-build/diagram-as-code-tutorial.kdp.yaml",
   "chapterDirPattern": "^\\d{2}-",
   "chapterFilePattern": "^(?!00-README\\.md$).+\\.md$",
@@ -17,7 +18,7 @@
   "coverTemplateMode": "auto",
   "coverTemplate": "classic",
   "collectAssets": true,
-  "normalizeManuscript": true,
+  "normalizeManuscript": false,
   "requireManuscriptApproval": false,
   "approvalTokenFile": "./ebook-output/diagram-as-code-tutorial.manuscript.approved",
   "generateManuscriptReviewReport": false,

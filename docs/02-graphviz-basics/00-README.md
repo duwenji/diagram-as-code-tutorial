@@ -17,6 +17,7 @@
 | 01 | [DOT言語の基本](01-dot-language-basics.md) | digraph・ノード・エッジ |
 | 02 | [ノード・エッジ属性](02-node-edge-attributes.md) | shape・color・label |
 | 03 | [レイアウト制御](03-layout-and-rankdir.md) | rankdir・クラスタ |
+| 04 | [リリース履歴](04-release-history.md) | バージョン番号方式の変遷 |
 
 ## 図の確認方法
 
@@ -30,4 +31,4 @@ npm run graphviz:render
 
 ## 学習の進め方
 
-01 → 03 の順に進めることを推奨します。
+01 → 04 の順に進めることを推奨します。

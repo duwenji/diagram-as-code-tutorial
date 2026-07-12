@@ -203,4 +203,4 @@ requirementDiagram
 
 ---
 
-[← 前へ: class/stateDiagram](03-state-and-class-diagram.md) | [次へ: 02. Graphviz基礎 →](../02-graphviz-basics/00-README.md)
+[← 前へ: class/stateDiagram](03-state-and-class-diagram.md) | [次へ: リリース履歴 →](05-release-history.md)

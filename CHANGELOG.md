@@ -13,6 +13,10 @@
   （02-requirements-phase.md, 01-diagram-catalog-overview.md,
   03-basic-design-phase.md, 06-release-operations-phase.md,
   07-agile-artifacts.md, 05-real-world-examples/01-skill-architecture-diagram.md）
+- 01-mermaid-basicsに「05-release-history.md」（Mermaidのリリース履歴、
+  timeline図によるバージョン年表）を追加
+- 02-graphviz-basicsに「04-release-history.md」（Graphvizのリリース履歴、
+  バージョン番号方式の変遷とクラスタ図例`05-release-history.dot`）を追加
 
 ### Changed
 

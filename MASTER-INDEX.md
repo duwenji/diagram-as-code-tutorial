@@ -17,12 +17,14 @@
 - [docs/01-mermaid-basics/02-sequence-diagram.md](docs/01-mermaid-basics/02-sequence-diagram.md) - sequenceDiagram
 - [docs/01-mermaid-basics/03-state-and-class-diagram.md](docs/01-mermaid-basics/03-state-and-class-diagram.md) - class/stateDiagram
 - [docs/01-mermaid-basics/04-other-diagrams.md](docs/01-mermaid-basics/04-other-diagrams.md) - ER/gantt/mindmap/requirementDiagram
+- [docs/01-mermaid-basics/05-release-history.md](docs/01-mermaid-basics/05-release-history.md) - リリース履歴
 
 ## 02. Graphviz基礎
 - [docs/02-graphviz-basics/00-README.md](docs/02-graphviz-basics/00-README.md)
 - [docs/02-graphviz-basics/01-dot-language-basics.md](docs/02-graphviz-basics/01-dot-language-basics.md) - DOT言語の基本
 - [docs/02-graphviz-basics/02-node-edge-attributes.md](docs/02-graphviz-basics/02-node-edge-attributes.md) - ノード・エッジ属性
 - [docs/02-graphviz-basics/03-layout-and-rankdir.md](docs/02-graphviz-basics/03-layout-and-rankdir.md) - レイアウト制御
+- [docs/02-graphviz-basics/04-release-history.md](docs/02-graphviz-basics/04-release-history.md) - リリース履歴
 
 ## 03. 図の選び方と整理法
 - [docs/03-diagram-patterns/00-README.md](docs/03-diagram-patterns/00-README.md)

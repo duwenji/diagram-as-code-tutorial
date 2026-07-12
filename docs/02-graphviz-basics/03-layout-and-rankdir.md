@@ -110,4 +110,4 @@ digraph ClusterDemo {
 
 ---
 
-[← 前へ: ノード・エッジ属性](02-node-edge-attributes.md) | [次へ: 03. 図の選び方と整理法 →](../03-diagram-patterns/00-README.md)
+[← 前へ: ノード・エッジ属性](02-node-edge-attributes.md) | [次へ: リリース履歴 →](04-release-history.md)

@@ -19,8 +19,9 @@ GitHubやVS Codeでそのままプレビューできる手軽さを活かし、
 | 02 | [sequenceDiagram](02-sequence-diagram.md) | メッセージ順序・loop/altブロック |
 | 03 | [class/stateDiagram](03-state-and-class-diagram.md) | クラス構造・状態遷移 |
 | 04 | [その他の図](04-other-diagrams.md) | ER図・gantt・mindmap・requirementDiagram |
+| 05 | [リリース履歴](05-release-history.md) | バージョンの変遷・破壊的変更 |
 
 ## 学習の進め方
 
-01 → 04 の順に進めることを推奨します。
+01 → 05 の順に進めることを推奨します。
 各教材の「理解度チェック」で習得状況を確認してください。
