@@ -8,6 +8,11 @@
 - 電子書籍化パイプライン（css-tutorialと同一構成）
 - Graphviz例のPNGレンダリングスクリプト
 - 06-project-phase-diagramsカテゴリ（プロジェクト開発フェーズ別の図カタログ、全8ファイル）
+- 06-project-phase-diagramsおよび05-real-world-examplesに、quadrantChart /
+  timeline / gitGraph / kanban / C4Context / block-betaの6図種を追加
+  （02-requirements-phase.md, 01-diagram-catalog-overview.md,
+  03-basic-design-phase.md, 06-release-operations-phase.md,
+  07-agile-artifacts.md, 05-real-world-examples/01-skill-architecture-diagram.md）
 
 ### Changed
 
@@ -25,3 +30,6 @@
   「次へ: 06. プロジェクト開発フェーズと図」への前後リンクに修正
 - 06カテゴリ最終教材（07-agile-artifacts.md）の末尾リンクを、
   真の最終教材として「トップに戻る」に修正
+- QUICK-REFERENCE.mdのMermaid早見表にarchitecture-betaと新規6図種を追加
+- ROADMAP.mdのC4Contextを将来拡張候補から現状スコープへ移動
+- 03-basic-design-phase.mdのC4Context脚注を正式な成果物セクションに格上げ
